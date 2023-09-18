@@ -2,7 +2,7 @@
 
 # Superagent 🥷
 
-**The agent framework for large language models**
+### The agent framework for large language models
 
 <p>
 <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/homanp/Superagent" />
@@ -16,12 +16,19 @@
 
 </div>
 
-## 🧐 Superagent
-Superagent is an open source agent framework that enables any developer to integrate production ready AI Agents in their applications in a matter of minutes.
+-----
+
+Superagent is an open source agent framework that enables any developer to integrate production ready AI Agents into any application in a matter of minutes.
+
+-----
 
 ## 🎥 Demo
 
 https://github.com/homanp/superagent/assets/2464556/d02a05d0-64e6-48a2-a102-fb1312105fa5
+
+## 🧐 Tutorials
+
+We post tutorials regularly on our [Youtube channel](https://www.youtube.com/channel/UCBeXnF8gh2EwAmOIwpmfjmA). Make sure to check them out! 
 
 ## ✨ Use cases
 
@@ -189,6 +196,14 @@ We have seperated the ui and api into two sepearate Supabase projects which is r
 Please refer to the [README](https://github.com/homanp/superagent/blob/v2/libs/legacy/README.md) in `/libs/legacy` for further instructions.
 
 </details>
+
+## 🔗 SDKs
+
+If you are planing on integrating Superagent into your stack, you can use one of the following SDKs:
+
+- [Python](https://github.com/homanp/superagent-py)
+- [Typescript/Javascript](https://github.com/homanp/superagent-js)
+- [Swift](https://github.com/simonweniger/superagent-swift) (community)
 
 
 ## 🫶 Contributions

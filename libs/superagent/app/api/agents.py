@@ -57,7 +57,14 @@ logging.basicConfig(level=logging.INFO)
 async def create(body: AgentRequest, api_user=Depends(get_current_api_user)):
     """Endpoint for creating an agent"""
     try:
-        data = await prisma.agent.create({**body.dict(), "apiUserId": api_user.id})
+        data = await prisma.agent.create(
+            {**body.dict(), "apiUserId": api_user.id},
+            include={
+                "tools": {"include": {"tool": True}},
+                "datasources": {"include": {"datasource": True}},
+                "llms": {"include": {"llm": True}},
+            },
+        )
         return {"success": True, "data": data}
     except Exception as e:
         handle_exception(e)
@@ -261,7 +268,7 @@ async def add_tool(
             {"toolId": body.toolId, "agentId": agent_id},
             include={"tool": True},
         )
-        return {"success": True, "data": agent_tool}
+        return {"success": True}
     except Exception as e:
         handle_exception(e)
 
@@ -344,7 +351,7 @@ async def add_datasource(
         #        handle_exception(flow_exception)
 
         # asyncio.create_task(run_datasource_flow())
-        return {"success": True, "data": agent_datasource}
+        return {"success": True}
     except Exception as e:
         handle_exception(e)
 
